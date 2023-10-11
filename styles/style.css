@@ -524,7 +524,7 @@
 .activities {
     width: 100%;
     max-width: var(--main-width);
-    margin-bottom: 70px;
+    margin-bottom: 37px;
 }
 
 .activities__title {
@@ -615,7 +615,7 @@
 }
 
 .activities__channels {
-    margin: -40px auto;
+    margin: -21px auto;
     width: 100%;
     max-width: 361px;
     height: 189px;
@@ -676,4 +676,21 @@
         font-size: 32px;
         line-height: 35px;
     }
+}
+
+/*strings section*/
+.strings {
+    overflow: hidden;
+    margin-bottom: 150px;
+}
+
+.strings__string {
+    display: block;
+    width: 127%;
+    white-space: initial;
+    font-size: 80px;
+    font-weight: 200;
+    line-height: 119px;
+    margin: 0 0 30px -60px;
+    text-transform: uppercase;
 }
