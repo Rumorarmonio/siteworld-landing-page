@@ -2,7 +2,7 @@ const sliderIntro = document.querySelector('.intro__main');
 
 let swiper = new Swiper(sliderIntro, {
     slidesPerView: 1,
-    spaceBetween: 0,
+    spaceBetween: 10000,
     allowTouchMove: false,
     loop: true,
     effect: 'fade',
