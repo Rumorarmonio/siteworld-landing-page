@@ -1,7 +1,5 @@
 const slider_intro = document.querySelector('.intro__main');
 
-console.log('hi');
-
 let swiper = new Swiper(slider_intro, {
     slidesPerView: 1,
     spaceBetween: 10,
