@@ -60,15 +60,27 @@
 }
 
 .page__container_purple {
-    background-color: var(--cyan);
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    /*background-color: var(--cyan);*/
+}
+
+#drawing-board {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .page__container_purple * {
     color: var(--white);
+    user-select: none;
 }
 
 /* header */
 .header {
+    /*z-index: 0;*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -680,6 +692,7 @@
 
 /*strings section*/
 .strings {
+    width: 100%;
     overflow: hidden;
     margin-bottom: 150px;
 }
@@ -687,10 +700,24 @@
 .strings__string {
     display: block;
     width: 127%;
-    white-space: initial;
+    white-space: nowrap;
     font-size: 80px;
     font-weight: 200;
     line-height: 119px;
     margin: 0 0 30px -60px;
     text-transform: uppercase;
+    color: var(--grey);
+}
+
+/*goal section*/
+.goal {
+    width: 100%;
+    max-width: var(--main-width);
+    margin-bottom: 37px;
+}
+
+.goal__title {
+    font-size: 52px;
+    font-weight: 200;
+    color: var(--cyan)
 }
