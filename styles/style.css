@@ -203,6 +203,7 @@
     max-width: 1060px;
     margin: auto;
     animation: .5s ease-in slideInFromLeft;
+    overflow: hidden;
 }
 
 .intro__pagination {
@@ -257,6 +258,7 @@
     font-size: 30px;
     padding-bottom: 15px;
     color: rgba(255, 255, 255, .4);
+    margin: 0 0 3px 3px;
 }
 
 .link__circle:before {

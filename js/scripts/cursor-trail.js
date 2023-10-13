@@ -9,8 +9,8 @@ const particles = [];
 const iterations = 1;
 const initialParticleSize = 100;
 
-let currentHue = 230;
-const minHue = 230;
+let currentHue = 150;
+const minHue = 150;
 const maxHue = 310;
 let hueIncrement = true
 
