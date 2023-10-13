@@ -17,6 +17,41 @@
     }
 }
 
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
 /* variables */
 :root {
     font: 400 15px 'Gilroy';
@@ -93,6 +128,7 @@
     display: flex;
     align-items: center;
     gap: 70px;
+    animation: .5s ease-in slideInFromLeft;
 }
 
 .menu {
@@ -137,6 +173,7 @@
 .header__right {
     display: flex;
     align-items: center;
+    animation: .5s ease-in slideInFromRight;
 }
 
 .header__telephone {
@@ -191,7 +228,7 @@
 
 /*intro*/
 .intro {
-    margin: 0 auto 50px;
+    margin: 0 auto 47px;
     width: 100%;
     max-width: var(--header-width);
     display: flex;
@@ -289,6 +326,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    animation: .5s ease-in slideInFromLeft;
 }
 
 .social-link {
@@ -302,6 +340,7 @@
 
 .intro__dialog {
     align-self: flex-end;
+    animation: .5s ease-in slideInFromRight;
 }
 
 .intro__dialog:hover {
@@ -696,7 +735,7 @@
 .strings {
     width: 100%;
     overflow: hidden;
-    margin-bottom: 150px;
+    margin: 0 auto 192px;
 }
 
 .strings__string {
@@ -718,8 +757,47 @@
     margin-bottom: 37px;
 }
 
+.card__image_multiply {
+    mix-blend-mode: multiply;
+}
+
 .goal__title {
-    font-size: 52px;
+    font-size: 76px;
     font-weight: 200;
-    color: var(--cyan)
+    line-height: 84px;
+    color: var(--cyan);
+    margin-bottom: 85px;
+}
+
+.goal__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 704px;
+    grid-gap: 20px;
+}
+
+.goal__card {
+    overflow: hidden;
+}
+
+.goal__card_green {
+    background-color: #119917;
+}
+
+.goal__card_beige {
+    background-color: #FFF5F5;
+    grid-column: span 2;
+}
+
+.goal__card_grey {
+    background-color: #F1F1F1;
+    grid-column: span 2;
+}
+
+.goal__card_blue {
+    background-color: #407AE4;
+}
+
+.goal__card_red {
+    background-color: #BE1E2D;
 }
