@@ -63,10 +63,10 @@
     position: relative;
     z-index: 2;
     overflow: hidden;
-    /*background-color: var(--cyan);*/
+    background-color: var(--cyan);
 }
 
-#drawing-board {
+.intro-animation {
     position: absolute;
     top: 0;
     left: 0;
@@ -80,7 +80,6 @@
 
 /* header */
 .header {
-    /*z-index: 0;*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -152,11 +151,17 @@
     color: var(--blue);
 }
 
-@media (max-width: 1700px) {
-    .header {
+@media (max-width: 1770px) {
+    .page__container_purple {
         padding: 0 50px;
     }
 }
+
+/*@media (max-width: 1700px) {*/
+/*    .header {*/
+/*        padding: 0 50px;*/
+/*    }*/
+/*}*/
 
 @media (max-width: 1000px) {
     .header {
@@ -218,7 +223,7 @@
 }
 
 .intro__title {
-    width: 100%;
+    width: fit-content;
     font-size: 80px;
     font-weight: 300;
     line-height: 82px;
@@ -226,8 +231,7 @@
 }
 
 .intro__text {
-    width: 100%;
-    max-width: 500px;
+    width: fit-content;
     font-size: 15px;
     font-weight: 400;
     line-height: 26px;
@@ -305,10 +309,6 @@
 }
 
 @media (max-width: 1700px) {
-    .intro {
-        padding: 0 50px;
-    }
-
     .intro__main {
         max-width: 800px;
     }
@@ -639,7 +639,7 @@
 
 @media (max-width: 1350px) {
     .activities {
-        padding: 0 10px;
+        padding: 0 20px;
     }
 
     .activities__grid {

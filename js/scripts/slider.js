@@ -2,8 +2,8 @@ const sliderIntro = document.querySelector('.intro__main');
 
 let swiper = new Swiper(sliderIntro, {
     slidesPerView: 1,
-    spaceBetween: 10000,
-    allowTouchMove: false,
+    spaceBetween: 100000,
+    allowTouchMove: true,
     loop: true,
     effect: 'fade',
     fadeEffect: {
@@ -26,5 +26,5 @@ const sliderStories = document.querySelector('.stories');
 let swiperStories = new Swiper(sliderStories, {
     loop: true,
     slidesPerView: 7,
-    spaceBetween: 250
+    spaceBetween: 300
 })
