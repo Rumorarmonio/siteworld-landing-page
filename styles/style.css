@@ -780,6 +780,7 @@
     overflow: hidden;
 }
 
+/*TODO: use nth-child() methods*/
 .goal__card_green {
     background-color: #119917;
 }
