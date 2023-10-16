@@ -150,7 +150,7 @@
     align-items: center;
     font-size: 15px;
     font-weight: 500;
-    color: #FFF;
+    color: var(--white);
     text-decoration: none;
 }
 
@@ -179,7 +179,7 @@
 .header__telephone {
     margin-right: 28px;
     text-decoration: none;
-    color: #FFF;
+    color: var(--white);
     font-size: 18px;
 }
 
@@ -463,6 +463,11 @@
     background: var(--blue);
 }
 
+.digital__circle:hover {
+    transition: .3s ease 50ms;
+    filter: drop-shadow(10px 10px 10px var(--grey));
+}
+
 .circle__content {
     width: 150px;
 }
@@ -651,6 +656,12 @@
     border-radius: 50%;
 }
 
+.activities__circle:hover {
+    transition: .3s ease 50ms;
+    filter: drop-shadow(10px 10px 10px var(--grey));
+    border-color: var(--grey);
+}
+
 .activities__circle span {
     display: block;
     line-height: 21px;
@@ -750,6 +761,50 @@
     color: var(--grey);
 }
 
+@media (max-width: 1350px) {
+    .strings__string {
+        line-height: 112px;
+        margin-bottom: 20px;
+    }
+
+    .strings {
+        margin-bottom: 150px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .strings__string {
+        font-size: 64px;
+        line-height: 90px;
+    }
+
+    .strings {
+        margin-bottom: 120px;
+    }
+}
+
+@media (max-width: 720px) {
+    .strings__string {
+        font-size: 48px;
+        line-height: 67px;
+    }
+
+    .strings {
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 420px) {
+    .strings__string {
+        font-size: 36px;
+        line-height: 50px;
+    }
+
+    .strings {
+        margin-bottom: 50px;
+    }
+}
+
 /*goal section*/
 .goal {
     width: 100%;
@@ -771,34 +826,277 @@
 
 .goal__cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 38% 1fr 38%;
     grid-auto-rows: 704px;
-    grid-gap: 20px;
+    grid-gap: 30px;
 }
 
 .goal__card {
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 69px;
 }
 
-/*TODO: use nth-child() methods*/
+.goal__card:nth-child(4n+2),
+.goal__card:nth-child(4n+3) {
+    grid-column: span 2;
+}
+
+.goal__card:nth-child(4n+4) .card__content *,
+.goal__card:nth-child(4n+1) .card__content * {
+    color: var(--white);
+}
+
+.card__content-wrapper {
+    width: 100%;
+    display: flex;
+    padding: 0 50px;
+    z-index: 1;
+}
+
+.card__title {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 11px;
+}
+
+.card__subtitle {
+    font-weight: 300;
+    line-height: 20px;
+}
+
 .goal__card_green {
     background-color: #119917;
 }
 
+.goal__card_green .card__image {
+    align-self: flex-start;
+    margin-top: -160px;
+}
+
+.goal__card_green .card__content-wrapper {
+    justify-content: flex-end;
+}
+
 .goal__card_beige {
     background-color: #FFF5F5;
-    grid-column: span 2;
+}
+
+.goal__card_beige .card__content-wrapper {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .goal__card_grey {
-    background-color: #F1F1F1;
-    grid-column: span 2;
+    background-color: #F2F2F2;
+}
+
+.goal__card_grey .card__image {
+    align-self: flex-end;
+    margin-top: -132px;
 }
 
 .goal__card_blue {
     background-color: #407AE4;
 }
 
+/*TODO: justify-self: flex-end; doesn't work :(*/
+.goal__card_blue .card__image {
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+.goal__card_blue .card__content {
+    align-self: center;
+}
+
 .goal__card_red {
     background-color: #BE1E2D;
+}
+
+.goal__card_red .card__image {
+    align-self: flex-end;
+    margin-top: -150px;
+}
+
+.goal__card_red .card__image:last-child {
+    display: none;
+}
+
+.goal__card_red .card__content-wrapper {
+    justify-content: center;
+}
+
+.goal__card_red .card__content-wrapper * {
+    text-align: center;
+}
+
+.card_car .card__content-wrapper {
+    justify-content: center;
+}
+
+.card_car .card__content-wrapper * {
+    text-align: center;
+}
+
+.card_car .card__content-wrapper {
+    margin-bottom: 130px;
+}
+
+.card_car .card__image {
+    margin: 0;
+}
+
+.goal__circle {
+    position: relative;
+    z-index: 1;
+    width: 182px;
+    min-width: 182px;
+    height: 182px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: -45px auto 0;
+    border: 2px solid var(--grey-light);
+    border-radius: 50%;
+}
+
+.goal__circle:hover {
+    transition: .3s ease 50ms;
+    filter: drop-shadow(10px 10px 10px var(--grey));
+    border-color: var(--grey);
+}
+
+.goal__circle span {
+    display: block;
+    font-weight: 300;
+    line-height: 23px;
+    color: var(--grey-middle);
+}
+
+.goal__circle > .circle__content {
+    width: 100px;
+}
+
+.goal__dots {
+    width: 18px;
+    height: 18px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 1350px) {
+    .goal {
+        padding: 0 159px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .goal {
+        padding: 0 159px;
+    }
+
+    .goal__title {
+        font-size: 62px;
+        font-weight: 200;
+        line-height: 68px;
+    }
+
+    .goal__cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .goal__card:nth-child(n) {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 1000px) {
+    .goal {
+        padding: 0 20px;
+    }
+
+    .goal__title {
+        font-size: 52px;
+        font-weight: 200;
+        line-height: 57px;
+        margin-bottom: 98px;
+    }
+
+    .goal__cards {
+        grid-auto-rows: 400px;
+        grid-gap: 30px;
+    }
+
+    .card__title {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 23px;
+    }
+
+    .card__image {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .goal__card_green .card__image {
+        align-self: flex-start;
+        margin-top: -77px;
+    }
+
+    .goal__card_grey .card__image {
+        margin-top: -15%;
+    }
+
+    .card_car .card__content-wrapper {
+        margin-bottom: 104px;
+    }
+
+    .goal__card_red .card__image {
+        display: none;
+    }
+
+    .goal__card_red .card__image:last-child {
+        display: block;
+        margin: auto;
+    }
+}
+
+@media (max-width: 820px) {
+    .goal__cards {
+        grid-gap: 0;
+        grid-auto-rows: 334px;
+    }
+
+    .goal__title {
+        margin-bottom: 73px;
+    }
+
+    .goal__card_blue .card__image {
+        margin-top: -14%;
+    }
+}
+
+@media (max-width: 520px) {
+    .goal__cards {
+        grid-template-columns: 1fr;
+    }
+
+    .goal__title {
+        margin-bottom: 54px;
+        font-size: 32px;
+        font-weight: 200;
+        line-height: 35px;
+    }
+
+    .goal__card_blue .card__image {
+        margin-top: -14%;
+    }
+
+    .card_car .card__content-wrapper {
+        margin-bottom: 45px;
+    }
 }
