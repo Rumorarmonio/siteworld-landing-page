@@ -65,6 +65,7 @@ validation
         errorMessage: 'Введите настоящую почту!',
     },
 ])
+// TODO: error message appears outside of the label tag
 .addField('.interest__input_checkbox', [
     {
         rule: 'required',
