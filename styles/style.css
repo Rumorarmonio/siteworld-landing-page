@@ -1245,8 +1245,9 @@
 
 /*clients section*/
 .clients {
-    width: 100%;
     overflow: hidden;
+    width: 100%;
+    margin-bottom: 50px;
 }
 
 .clients__title {
@@ -1269,6 +1270,7 @@
     height: 300px;
     border-radius: 50%;
     border: 1px solid var(--grey-light);
+    background-color: var(--white);
     color: var(--grey);
     display: flex;
     flex-direction: column;
@@ -1282,5 +1284,3 @@
     color: var(--white);
     border-color: unset;
 }
-
-
