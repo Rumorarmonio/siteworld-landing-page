@@ -64,6 +64,7 @@
     --grey: #444A57;
     --grey-middle: #7A7F88;
     --grey-light: #EBEBEB;
+    --grey-lightest: #FAFAFA;
 }
 
 *,
@@ -1247,7 +1248,7 @@
 .clients {
     overflow: hidden;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .clients__title {
@@ -1263,6 +1264,7 @@
 .clients__list {
     display: flex;
     gap: 40px;
+    margin-bottom: 80px;
 }
 
 .client__link {
@@ -1283,4 +1285,289 @@
     background-color: var(--blue);
     color: var(--white);
     border-color: unset;
+}
+
+.clients__circle {
+    position: relative;
+    z-index: 1;
+    width: 182px;
+    min-width: 182px;
+    height: 182px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: -45px auto 0;
+    border: 2px solid var(--grey-light);
+    border-radius: 50%;
+}
+
+.clients__circle:hover {
+    transition: .3s ease 50ms;
+    filter: drop-shadow(10px 10px 10px var(--grey));
+    border-color: var(--grey);
+}
+
+.clients__circle span {
+    display: block;
+    font-weight: 300;
+    line-height: 23px;
+    color: var(--grey-middle);
+}
+
+.clients__circle > .circle__content {
+    width: 100px;
+}
+
+.clients__dots {
+    width: 18px;
+    height: 18px;
+    margin-bottom: 5px;
+}
+
+/*interest section*/
+.interest {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: flex-end;
+    margin-bottom: 100px;
+    background-color: var(--grey-lightest);
+    padding: 124px 0 137px 233px;
+}
+
+.interest__left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.interest__title {
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 66px;
+    color: var(--cyan);
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.interest__subtitle {
+    line-height: 26px;
+    color: var(--grey-middle);
+    margin-bottom: 50px;
+}
+
+.interest__form {
+    width: 100%;
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.interest__input {
+    background: url(../img/svg/interest/person.svg) no-repeat scroll 7px 7px;
+    padding: 15px 30px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.interest__label:nth-child(1) > .interest__input {
+url(../img/svg/interest/person.svg) no-repeat scroll 5 px 13 px;
+}
+
+.interest__label:nth-child(2) > .interest__input {
+    background: url(../img/svg/interest/device-mobile.svg) no-repeat scroll 5px 13px;
+}
+
+.interest__label:nth-child(3) > .interest__input {
+    background: url(../img/svg/interest/briefcase.svg) no-repeat scroll 5px 13px;
+}
+
+.interest__label:nth-child(4) > .interest__input {
+    background: url(../img/svg/interest/mail.svg) no-repeat scroll 5px 13px;
+}
+
+.interest__label {
+    width: fit-content;
+}
+
+.interest__button {
+    width: 100%;
+    background-color: var(--cyan);
+    padding: 15px;
+    border-radius: 6px;
+    color: var(--white);
+}
+
+.checkbox-container {
+    width: 300px;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 300;
+    line-height: 19px;
+}
+
+.checkbox-container span {
+    font-weight: 500;
+    color: var(--blue);
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 1px solid var(--blue);
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #eee;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    border: 1px solid var(--blue);
+}
+
+.checkmark {
+    border-radius: 50%;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 11px;
+    top: -9px;
+    width: 12px;
+    height: 25px;
+    border: solid var(--blue);
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+}
+
+.interest__right {
+    position: relative;
+}
+
+.interest__circle {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 302px;
+    height: 302px;
+    background-color: rgba(0, 0, 0, .05);
+    border-radius: 50%;
+}
+
+.circle__text {
+    color: var(--grey-middle);
+}
+
+.circle__text > a {
+    color: var(--grey-middle);
+    text-decoration: underline;
+}
+
+@media (max-width: 1830px) {
+    .interest {
+        width: 95%;
+        padding: 138px 0 137px 108px;
+    }
+
+    .interest * {
+        margin: auto;
+    }
+
+    .interest__left {
+        width: 70%;
+        gap: 20px;
+    }
+    
+    .interest__title {
+        text-align: center;
+    }
+    
+    .interest__subtitle {
+        text-align: center;
+    }
+}
+
+@media (max-width: 1740px) {
+    .interest {
+        gap: 70px;
+    }
+}
+
+@media (max-width: 1350px) {
+    .interest {
+        padding: 138px 0 20px 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .interest__title {
+        font-size: 44px;
+        font-weight: 300;
+        line-height: 48px;
+    }
+}
+
+@media (max-width: 850px) {
+    .interest {
+        width: 100%;
+    }
+}
+
+@media (max-width: 820px) {
+    .interest__form {
+        width: 80%;
+        grid-template-columns: 1fr;
+    }
+
+    .interest__label {
+        width: 100%;
+    }
+
+    .interest__input {
+        width: 100%;
+    }
+
+    .interest__right {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 720px) {
+    .interest__left {
+        width: 90%;
+        gap: 20px;
+    }
+
+    .interest__form {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
 }

@@ -14,12 +14,12 @@
     <link rel="stylesheet" href="styles/style.css">
     <!--    js libs-->
     <script src="js/libs/swiper-bundle.min.js" defer></script>
-    <!--    <script src="js/libs/inputmask.min.js" defer></script>-->
-    <!--    <script src="js/libs/just-validate.production.min.js" defer></script>-->
+        <script src="js/libs/inputmask.min.js" defer></script>
+        <script src="js/libs/just-validate.production.min.js" defer></script>
     <!--    js scripts-->
     <script src="js/scripts/sliders.js" defer></script>
     <script src="js/scripts/cursor-trail.js" defer></script>
-    <!--    <script src="js/scripts/form.js" defer></script>-->
+        <script src="js/scripts/form.js" defer></script>
     <!--    <script src="js/scripts/dropdown.js" defer></script>-->
 </head>
 
@@ -467,50 +467,96 @@
     <h2 class="clients__title">
         Наши клиенты о нас говорят
     </h2>
-        <ul class="clients__list swiper-wrapper">
-            <li class="clients_client client swiper-slide">
-                <a href="#" class="client__link client__link_blue">
-                    <img class="client__image" src="img/png/clients/restobar.png" alt="restobar" width="60" height="78">
-                    Полноценный каталог<br/>товаров с корзиной
-                </a>
-            </li>
-            <li class="clients_client client swiper-slide">
-                <a href="#" class="client__link client__link_blue">
-                    <img class="client__image" src="img/png/clients/vision-center.png" alt="vision-center" width="174" height="97">
-                    Банкетные предложения<br/>с возможностью разделения<br/>по типам банкетов
-                </a>
-            </li>
-            <li class="clients_client client swiper-slide">
-                <a href="#" class="client__link">
-                    <img class="client__image" src="img/png/clients/lighthouse.png" alt="lighthouse" width="71" height="95">
-                    Отзывы и рейтинги<br/>на сайте с премодерацией
-                </a>
-            </li>
-            <li class="clients_client client swiper-slide">
-                <a href="#" class="client__link">
-                    <img class="client__image" src="img/png/clients/my-mats.png" alt="my-mats" width="97" height="78">
-                    Полноценный каталог<br/>товаров
-                </a>
-            </li>
-            <li class="clients_client client swiper-slide">
-                <a href="#" class="client__link">
-                    <img class="client__image" src="img/png/clients/buuza.png" alt="buuza" width="87" height="78">
-                    Личный кабинет клиента<br/>с историей заказов<br/>и накопительной
-                </a>
-            </li>
-            <li class="clients_client client swiper-slide">
-                <a href="#" class="client__link">
-                    <img class="client__image" src="img/png/clients/bv.png" alt="bv" width="93" height="57">
-                    Банкетные предложения<br/>с возможностью разделения<br/>по типам банкетов
-                </a>
-            </li>
-            <li class="clients_client client swiper-slide">
-                <a href="#" class="client__link client__link_blue">
-                    <img class="client__image" src="img/png/clients/sushi-yum.png" alt="sushi-yum" width="84" height="61">
-                    Полноценный каталог товаров<br/>с корзиной и страницей<br/>оформления заказа
-                </a>
-            </li>
-        </ul>
+    <ul class="clients__list swiper-wrapper">
+        <li class="clients_client client swiper-slide">
+            <a href="#" class="client__link client__link_blue">
+                <img class="client__image" src="img/png/clients/restobar.png" alt="restobar" width="60" height="78">
+                Полноценный каталог<br/>товаров с корзиной
+            </a>
+        </li>
+        <li class="clients_client client swiper-slide">
+            <a href="#" class="client__link client__link_blue">
+                <img class="client__image" src="img/png/clients/vision-center.png" alt="vision-center" width="174" height="97">
+                Банкетные предложения<br/>с возможностью разделения<br/>по типам банкетов
+            </a>
+        </li>
+        <li class="clients_client client swiper-slide">
+            <a href="#" class="client__link">
+                <img class="client__image" src="img/png/clients/lighthouse.png" alt="lighthouse" width="71" height="95">
+                Отзывы и рейтинги<br/>на сайте с премодерацией
+            </a>
+        </li>
+        <li class="clients_client client swiper-slide">
+            <a href="#" class="client__link">
+                <img class="client__image" src="img/png/clients/my-mats.png" alt="my-mats" width="97" height="78">
+                Полноценный каталог<br/>товаров
+            </a>
+        </li>
+        <li class="clients_client client swiper-slide">
+            <a href="#" class="client__link">
+                <img class="client__image" src="img/png/clients/buuza.png" alt="buuza" width="87" height="78">
+                Личный кабинет клиента<br/>с историей заказов<br/>и накопительной
+            </a>
+        </li>
+        <li class="clients_client client swiper-slide">
+            <a href="#" class="client__link">
+                <img class="client__image" src="img/png/clients/bv.png" alt="bv" width="93" height="57">
+                Банкетные предложения<br/>с возможностью разделения<br/>по типам банкетов
+            </a>
+        </li>
+        <li class="clients_client client swiper-slide">
+            <a href="#" class="client__link client__link_blue">
+                <img class="client__image" src="img/png/clients/sushi-yum.png" alt="sushi-yum" width="84" height="61">
+                Полноценный каталог товаров<br/>с корзиной и страницей<br/>оформления заказа
+            </a>
+        </li>
+    </ul>
+
+    <a class="clients__circle circle" href="#">
+        <div class="circle__content">
+            <img class="clients__dots" src="img/svg/dots.svg" alt="dots">
+            <span>показать<br/>ещё</span>
+        </div>
+    </a>
+</section>
+
+<section class="interest">
+    <div class="interest__left">
+        <h2 class="interest__title">
+            Вам будет интересно и захочется ещё
+        </h2>
+        <p class="interest__subtitle">
+            Наработали огромный опыт и выполнили достаточное количество<br/>кейсов, чтобы решать их на высоком уровне
+        </p>
+        <form class="interest__form" action="">
+            <label class="interest__label">
+                <input class="interest__input interest__input_name" type="text" placeholder="Ваше имя"/>
+            </label>
+            <label class="interest__label">
+                <input class="interest__input interest__input_telephone" type="tel" placeholder="Телефон"/>
+            </label>
+            <label class="interest__label">
+                <input class="interest__input interest__input_company" type="text" placeholder="Название компании"/>
+            </label>
+            <label class="interest__label">
+                <input class="interest__input interest__input_email" type="email" placeholder="Электронная почта"/>
+            </label>
+            <button class="interest__button" type="submit">Отправить</button>
+            <label class="interest__label checkbox-container">
+                <input class="interest__input interest__input_checkbox" type="checkbox">
+                <span class="checkmark"></span>
+                <i>Я даю своё <span>согласие</span> на обработку моих персональных данных</i>
+            </label>
+        </form>
+    </div>
+    <div class="interest__right">
+        <div class="interest__circle circle">
+            <p class="circle__text">
+                Если у Вас есть проект,<br/>предлагаем <a href="#">заполнить бриф</a>
+            </p>
+        </div>
+        <img class="interest__image" src="img/svg/interest/mountain.svg" alt="mountain">
+    </div>
 </section>
 
 </body>

@@ -1,12 +1,12 @@
-const form = document.querySelector('.sidebar__form')
+const form = document.querySelector('.interest__form')
 const telSelector = form.querySelector('input[type="tel"]')
 const inputMask = new Inputmask('+7 (999) 999-99-99')
 inputMask.mask(telSelector)
 
-const validation = new JustValidate('.sidebar__form')
+const validation = new JustValidate('.interest__form')
 
 validation
-.addField('.input-name', [
+.addField('.interest__input_name', [
     {
         rule: 'minLength',
         value: 3,
@@ -22,7 +22,7 @@ validation
         errorMessage: 'Введите имя!'
     }
 ])
-.addField('.input-tel', [
+.addField('.interest__input_telephone', [
     {
         rule: 'required',
         value: true,
@@ -37,7 +37,35 @@ validation
         errorMessage: 'Введите настоящий номер телефона!',
     },
 ])
-.addField('.input-checkbox', [
+.addField('.interest__input_company', [
+    {
+        rule: 'minLength',
+        value: 3,
+        errorMessage: 'Поле должно содержать минимум 3 символа!'
+    },
+    {
+        rule: 'maxLength',
+        value: 30,
+    },
+    {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Введите компанию!'
+    }
+])
+.addField('.interest__input_email', [
+    {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Введите почту!',
+    },
+    {
+        rule: 'email',
+        value: true,
+        errorMessage: 'Введите настоящую почту!',
+    },
+])
+.addField('.interest__input_checkbox', [
     {
         rule: 'required',
         value: true,
@@ -45,5 +73,5 @@ validation
     }
 ])
 .onSuccess((event) => {
-    console.log('Validation passes and form submitted', event)
+    console.log('Validation passes and form submitted!', event)
 })
