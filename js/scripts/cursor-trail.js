@@ -32,7 +32,7 @@ const mouse = {
 
 // if call addEventListener on a canvas element,
 // it will not detect mouse movement on top of other elements
-const container = document.querySelector('.page__container_purple');
+const container = document.querySelector('.page__container_upper');
 container.addEventListener('mousemove', event => {
     mouse.x = event.x;
     mouse.y = event.y;

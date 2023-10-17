@@ -1,6 +1,4 @@
-const sliderIntro = document.querySelector('.intro__main')
-
-let swiper = new Swiper(sliderIntro, {
+new Swiper('.intro__main', {
     slidesPerView: 1,
     spaceBetween: 100000,
     allowTouchMove: true,
@@ -21,17 +19,13 @@ let swiper = new Swiper(sliderIntro, {
     },
 })
 
-const sliderStories = document.querySelector('.stories')
-
-let swiperStories = new Swiper(sliderStories, {
+new Swiper('.stories', {
     loop: true,
     slidesPerView: 7,
     spaceBetween: 300
 })
 
-const sliderClients = document.querySelector('.clients')
-
-let swiperClients = new Swiper(sliderClients, {
+new Swiper('.clients', {
     loop: true,
     slidesPerView: 7,
     spaceBetween: 300
