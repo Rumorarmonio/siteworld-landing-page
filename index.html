@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
     <!--    js libs-->
     <script src="js/libs/swiper-bundle.min.js" defer></script>
     <script src="js/libs/inputmask.min.js" defer></script>
@@ -20,6 +21,7 @@
     <script src="js/scripts/sliders.js" defer></script>
     <script src="js/scripts/cursor-trail.js" defer></script>
     <script src="js/scripts/form.js" defer></script>
+    <script src="js/scripts/sidebar.js" defer></script>
     <!--    <script src="js/scripts/dropdown.js" defer></script>-->
 </head>
 
@@ -141,27 +143,27 @@
     </p>
     <div class="digital__bottom">
         <div class="digital__partners">
-            <strong class="digital__recommend">Наши партнеры нас рекомендуют</strong>
+            <strong class="digital__recommend">Наши партнёры нас рекомендуют</strong>
             <ul class="digital__list">
                 <li>
-                    <a href="#">
+                    <button>
                         <img src="img/png/partners/alpha-bank.png" alt="alpha-bank">
-                    </a>
+                    </button>
                 </li>
                 <li>
-                    <a href="#">
+                    <button>
                         <img src="img/png/partners/reg-ru.png" alt="reg.ru">
-                    </a>
+                    </button>
                 </li>
                 <li>
-                    <a href="#">
+                    <button>
                         <img src="img/png/partners/1ass-bitrix.png" alt="bitrix">
-                    </a>
+                    </button>
                 </li>
                 <li>
-                    <a href="#">
+                    <button>
                         <img src="img/png/partners/amocrm.png" alt="amocrm">
-                    </a>
+                    </button>
                 </li>
             </ul>
         </div>
@@ -172,6 +174,14 @@
                 <strong class="circle__agency">Входим в топ ведущих агентств страны</strong>
             </div>
         </a>
+    </div>
+
+    <div class="sidebar mySidebar">
+        <a href="javascript:void(0)" class="sidebar__close" onclick="closeNav()">×</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
     </div>
 </section>
 
@@ -914,7 +924,7 @@
         <div class="footer__bottom">
             <i>© Copyright 2017-2022</i>
             <a href="#">Политика конфиденциальности</a>
-            <i>C любовью к web wecrew.ru</i>
+            <i>C любовью к web wecrew.ru test!!!</i>
         </div>
     </footer>
 </div>

@@ -451,6 +451,12 @@
     flex-wrap: wrap;
 }
 
+.digital__list button {
+    border: unset;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 .digital__circle {
     display: flex;
     flex-direction: column;
