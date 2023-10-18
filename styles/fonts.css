@@ -29,3 +29,11 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Anjhay';
+    src: local('Anjhay Medium'), local('Anjhay-Medium'), url('../fonts/Anjhay.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
