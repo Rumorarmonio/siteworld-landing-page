@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/certificates.css">
     <!--    js libs-->
     <script src="js/libs/swiper-bundle.min.js" defer></script>
     <script src="js/libs/inputmask.min.js" defer></script>
@@ -21,11 +21,14 @@
     <script src="js/scripts/sliders.js" defer></script>
     <script src="js/scripts/cursor-trail.js" defer></script>
     <script src="js/scripts/form.js" defer></script>
-    <script src="js/scripts/sidebar.js" defer></script>
+    <script src="js/scripts/certificates.js" defer></script>
     <!--    <script src="js/scripts/dropdown.js" defer></script>-->
 </head>
 
 <body class="page">
+
+<div class="page__shadow"></div>
+
 <div class="page__container page__container_upper">
     <header class="header">
         <div class="header__left">
@@ -176,12 +179,75 @@
         </a>
     </div>
 
-    <div class="sidebar mySidebar">
-        <a href="javascript:void(0)" class="sidebar__close" onclick="closeNav()">×</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+    <div class="certificates">
+        <ul class="certificates__list">
+            <li>
+                <img src="img/jpg/certificates/alpha-1.jpg" alt="alpha-1">
+            </li>
+            <li>
+                <img src="img/jpg/certificates/alpha-1.jpg" alt="alpha-1">
+            </li>
+        </ul>
+        <div class="sidebar">
+            <a href="javascript:void(0)" class="sidebar__close">×</a>
+
+            <div class="sidebar__content">
+                <div class="sidebar__recommendation">
+                    <h2>Альфа банк рекомендует нас</h2>
+                    <p>Мы 9 лет шли к возможности - работать с разными масштабами бизнеса: от маленьких компаний до серьезных корпораций. Сейчас разные бренды рекомендуют нас!</p>
+                    <p>Одним из множества ключевых партнеров является Альфа-банк, что доказывает высокое качество и надежность работы нашей компании.</p>
+                </div>
+                <div class="sidebar__mutuality">
+                    <h3>Отвечаем взаимностью<br/>на взаимность</h3>
+                    <p>Если Вам нужен расчетный счет, онлайн-эквайринг или кассовое оборудование, то мы рекомендуем нашего партнера Альфа-Банк</p>
+                    <ul class="sidebar__links">
+                        <li>
+                            <a href="#">
+                                Открыть расчетный счет и получить бонусы
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Заказать кассовое оборудование
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Подключить онлайн-эквайринг выгодно
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <form class="sidebar__form" action="">
+                    <h3>Или оставьте заявку на консультацию и получите подарок нашего партнера</h3>
+                    <label class="sidebar__label">
+                        <input class="sidebar__input sidebar__input_name" type="text" placeholder="Ваше имя"/>
+                    </label>
+                    <label class="sidebar__label">
+                        <input class="sidebar__input sidebar__input_telephone" type="tel" placeholder="Телефон"/>
+                    </label>
+                    <label class="sidebar__label">
+                        <input class="sidebar__input sidebar__input_company" type="text" placeholder="Ваш город"/>
+                    </label>
+                    <label class="sidebar__label">
+                        <select class="sidebar__input" id="cars" name="cars">
+                            <option value="marketing">Маркетинг</option>
+                            <option value="design">Дизайн</option>
+                            <option value="programming">Программирование</option>
+                            <option value="seo">SEO</option>
+                            <option value="sales">Продажи</option>
+                            <option value="staff">Персонал</option>
+                        </select>
+                    </label>
+                    <button class="sidebar__button" type="submit">свяжитесь со мной сию минуту</button>
+                    <label class="interest__label checkbox-container">
+                        <input class="interest__input interest__input_checkbox" type="checkbox">
+                        <span class="checkmark"></span>
+                        <i>Я даю своё <span>согласие</span> на обработку моих персональных данных</i>
+                    </label>
+                </form>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -565,7 +631,7 @@
                 Если у Вас есть проект,<br/>предлагаем <a href="#">заполнить бриф</a>
             </p>
         </div>
-        <img class="interest__image" src="img/svg/interest/mountain.svg" alt="mountain">
+        <img class="interest__image" src="img/svg/form-icons/mountain.svg" alt="mountain">
     </div>
 </section>
 
