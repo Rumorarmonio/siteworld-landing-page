@@ -3,7 +3,6 @@
     height: 100%;
     width: 100%;
     position: fixed;
-    justify-content: space-between;
     z-index: 5;
     top: 0;
     left: 0;
@@ -11,36 +10,42 @@
 
 .certificates_visible {
     display: flex;
+    justify-content: space-between;
+}
+
+.certificates__list-wrapper {
+    overflow-y: scroll;
+    width: 100%;
+    animation: .5s ease-in fadeIn;
 }
 
 .certificates__list {
+    width: fit-content;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    overflow-y: scroll;
     margin: 50px auto;
-    animation: .5s ease-in slideInFromLeft;
 }
 
-.certificates__list::-webkit-scrollbar,
+.certificates__list-wrapper::-webkit-scrollbar,
 .sidebar::-webkit-scrollbar {
     width: 5px;
 }
 
-.certificates__list::-webkit-scrollbar-track,
+.certificates__list-wrapper::-webkit-scrollbar-track,
 .sidebar::-webkit-scrollbar-track {
     background-color: var(--grey-light);
 }
 
-.certificates__list::-webkit-scrollbar-thumb,
+.certificates__list-wrapper::-webkit-scrollbar-thumb,
 .sidebar::-webkit-scrollbar-thumb {
     background-color: var(--blue);
     border-radius: 5px;
 }
 
-/*TODO: fix animation*/
 .sidebar {
     width: 544px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -172,14 +177,19 @@ url(../img/svg/form-icons/person.svg) no-repeat scroll 5 px 13 px;
 
 @media (max-width: 1240px) {
     .certificates {
+        /*height: fit-content;*/
         flex-direction: column-reverse;
-        height: unset;
+        justify-content: unset;
         overflow-y: scroll;
+    }
+
+    .certificates__list {
+        height: unset;
     }
 
     .sidebar {
         width: 100%;
-        height: fit-content;
+        height: unset;
         padding: 34px 70px;
     }
 
