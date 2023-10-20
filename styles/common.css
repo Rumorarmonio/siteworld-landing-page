@@ -1,0 +1,73 @@
+/*animations*/
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* variables */
+:root {
+    font: 400 15px 'Gilroy';
+    /*scroll-behavior: smooth;*/
+    --main-width: 1290px;
+    --header-width: 1700px;
+    --white: #FFFFFF;
+    --blue: #027FF3;
+    --cyan: #001036;
+    --grey: #444A57;
+    --grey-middle: #7A7F88;
+    --grey-light: #EBEBEB;
+    --grey-lightest: #FAFAFA;
+}
+
+*,
+*::after,
+*::before {
+    font-weight: 400;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: var(--grey);
+}
