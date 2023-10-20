@@ -15,13 +15,14 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/certificates.css">
     <!--    js libs-->
+    <script src="js/libs/jquery-3.7.1.min.js" defer></script>
     <script src="js/libs/swiper-bundle.min.js" defer></script>
     <script src="js/libs/inputmask.min.js" defer></script>
     <script src="js/libs/just-validate.production.min.js" defer></script>
     <!--    js scripts-->
     <script src="js/scripts/sliders.js" defer></script>
     <script src="js/scripts/cursor-trail.js" defer></script>
-    <script src="js/scripts/form.js" defer></script>
+    <script src="js/scripts/forms.js" defer></script>
     <script src="js/scripts/certificates.js" defer></script>
     <!--    <script src="js/scripts/dropdown.js" defer></script>-->
 </head>
@@ -141,7 +142,8 @@
         предлагаем эффективные инструменты и свежие идеи для увеличения потока клиентов в интернете
     </h2>
     <p class="digital__text">
-        Разрабатываем умные сайты и сервисы, анализируем бизнес, предлагаем комплексные стратегии интернет-маркетинга, продвигаем в Яндекс и Google, настраиваем контекстную рекламу для малого и среднего бизнеса, привлекаем аудиторию в социальных сетях, генерируем трафик с гарантией результата
+        Разрабатываем умные сайты и сервисы, анализируем бизнес, предлагаем комплексные стратегии интернет-маркетинга, продвигаем в Яндекс и Google, настраиваем
+        контекстную рекламу для малого и среднего бизнеса, привлекаем аудиторию в социальных сетях, генерируем трафик с гарантией результата
     </p>
     <div class="digital__bottom">
         <div class="digital__partners">
@@ -220,19 +222,19 @@
                         </li>
                     </ul>
                 </div>
-                <form class="sidebar__form" action="">
+                <form class="sidebar__form" action="php/mail_sidebar.php">
                     <h3>Или оставьте заявку на консультацию и получите подарок нашего партнера</h3>
                     <label class="sidebar__label">
-                        <input class="sidebar__input sidebar__input_name" type="text" placeholder="Ваше имя"/>
+                        <input class="sidebar__input sidebar__input_name" type="text" placeholder="Ваше имя" name="nameS"/>
                     </label>
                     <label class="sidebar__label">
-                        <input class="sidebar__input sidebar__input_telephone" type="tel" placeholder="Телефон"/>
+                        <input class="sidebar__input sidebar__input_telephone" type="tel" placeholder="Телефон" name="telephoneS"/>
                     </label>
                     <label class="sidebar__label">
-                        <input class="sidebar__input sidebar__input_company" type="text" placeholder="Ваш город"/>
+                        <input class="sidebar__input sidebar__input_city" type="text" placeholder="Ваш город" name="cityS"/>
                     </label>
                     <label class="sidebar__label">
-                        <select class="sidebar__input" id="cars" name="cars">
+                        <select class="sidebar__input sidebar__input_field" id="cars" name="fieldS">
                             <option value="marketing">Маркетинг</option>
                             <option value="design">Дизайн</option>
                             <option value="programming">Программирование</option>
@@ -242,8 +244,8 @@
                         </select>
                     </label>
                     <button class="sidebar__button" type="submit">свяжитесь со мной сию минуту</button>
-                    <label class="interest__label checkbox-container">
-                        <input class="interest__input interest__input_checkbox" type="checkbox">
+                    <label class="sidebar__label checkbox-container">
+                        <input class="sidebar__input sidebar__input_checkbox" type="checkbox">
                         <span class="checkmark"></span>
                         <i>Я даю своё <span>согласие</span> на обработку моих персональных данных</i>
                     </label>
@@ -634,18 +636,18 @@
         <p class="interest__subtitle">
             Наработали огромный опыт и выполнили достаточное количество<br/>кейсов, чтобы решать их на высоком уровне
         </p>
-        <form class="interest__form" action="">
+        <form class="interest__form" action="php/mail_interest.php">
             <label class="interest__label">
-                <input class="interest__input interest__input_name" type="text" placeholder="Ваше имя"/>
+                <input class="interest__input interest__input_name" type="text" placeholder="Ваше имя" name="name"/>
             </label>
             <label class="interest__label">
-                <input class="interest__input interest__input_telephone" type="tel" placeholder="Телефон"/>
+                <input class="interest__input interest__input_telephone" type="tel" placeholder="Телефон" name="telephone"/>
             </label>
             <label class="interest__label">
-                <input class="interest__input interest__input_company" type="text" placeholder="Название компании"/>
+                <input class="interest__input interest__input_company" type="text" placeholder="Название компании" name="company"/>
             </label>
             <label class="interest__label">
-                <input class="interest__input interest__input_email" type="email" placeholder="Электронная почта"/>
+                <input class="interest__input interest__input_email" type="email" placeholder="Электронная почта" name="email"/>
             </label>
             <button class="interest__button" type="submit">Отправить</button>
             <label class="interest__label checkbox-container">

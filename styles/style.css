@@ -1229,6 +1229,11 @@
     gap: 20px;
 }
 
+.clients_client:hover {
+    transition: .3s ease 50ms;
+    filter: drop-shadow(10px 10px 10px var(--grey));
+}
+
 .client__link_blue {
     background-color: var(--blue);
     color: var(--white);
@@ -1273,7 +1278,7 @@
     margin-bottom: 5px;
 }
 
-/*form-icons section*/
+/*forms-icons section*/
 .interest {
     width: 90%;
     display: flex;
