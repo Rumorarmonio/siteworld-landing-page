@@ -12,8 +12,8 @@ $message = "
     <body>
         <hr>
         <b>Данные из формы:</b> <br><br>
-        ФИО: $name <br> 
-        Телефон: $telephone <br> 
+        ФИО: $name <br>
+        Телефон: $telephone <br>
         Город: $city <br>
         Направление: $field <br>
         <hr>

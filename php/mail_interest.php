@@ -1,9 +1,14 @@
 <?php
 
-$name = !empty($_POST['name']) ? $_POST['name'] : 'null';
-$telephone = !empty($_POST['telephone']) ? $_POST['telephone'] : 'null';
-$company = !empty($_POST['company']) ? $_POST['company'] : 'null';
-$email = !empty($_POST['email']) ? $_POST['email'] : 'null';
+//$name = !empty($_POST['name']) ? $_POST['name'] : 'null';
+//$telephone = !empty($_POST['telephone']) ? $_POST['telephone'] : 'null';
+//$company = !empty($_POST['company']) ? $_POST['company'] : 'null';
+//$email = !empty($_POST['email']) ? $_POST['email'] : 'null';
+
+$name = $_POST['name'];
+$telephone = $_POST['telephone'];
+$company = $_POST['company'];
+$email = $_POST['email'];
 
 $to = 'yxllwllxy@gmail.com';
 $subject = 'форма "интересно и захочется ещё"';
