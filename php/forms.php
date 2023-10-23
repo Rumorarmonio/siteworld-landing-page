@@ -1,5 +1,7 @@
 <?php
 
+require_once('constants.php');
+
 if (isset($_POST['interest'])) {
 //    $name = !empty($_POST['name']) ? $_POST['name'] : 'null';
 //    $telephone = !empty($_POST['telephone']) ? $_POST['telephone'] : 'null';
@@ -31,6 +33,8 @@ if (isset($_POST['interest'])) {
 
     mail($to, $subject, $message, $headers);
 
+    sendTelegramMessage($subject);
+
 } elseif (isset($_POST['sidebar'])) {
     $name = $_POST['name'];
     $telephone = $_POST['telephone'];
@@ -56,4 +60,20 @@ if (isset($_POST['interest'])) {
     $headers = "Content-type: text/html; charset=utf-8\r\n" . 'From: example@example.com' . "\r\n" . 'Reply-To: example@example.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
 
     mail($to, $subject, $message, $headers);
+
+    sendTelegramMessage($subject);
+}
+
+function sendTelegramMessage($subject)
+{
+    $textMessage = "Вам новое письмо!\n\nС темой:\n\n<b>'{$subject}'</b>\n\n<i>Не забудьте проверить почту!</i>";
+    $textMessage = urlencode($textMessage);
+
+    $urlQuery = 'https://api.telegram.org/bot' . TG_TOKEN . '/sendMessage?chat_id=' . TG_USER_ID . '&text=' . $textMessage . '&parse_mode=html';
+
+    var_dump($urlQuery);
+
+    $result = file_get_contents($urlQuery);
+
+    var_dump($result);
 }
