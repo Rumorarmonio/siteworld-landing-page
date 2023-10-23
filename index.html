@@ -22,8 +22,7 @@
     <!--    js scripts-->
     <script src="js/scripts/sliders.js" defer></script>
     <script src="js/scripts/cursor-trail.js" defer></script>
-    <script src="js/scripts/form_interest.js" defer></script>
-<!--    <script src="js/scripts/form_sidebar.js" defer></script>-->
+    <script src="js/scripts/forms.js" defer></script>
     <script src="js/scripts/certificates.js" defer></script>
     <!--    <script src="js/scripts/dropdown.js" defer></script>-->
 </head>
@@ -223,19 +222,22 @@
                         </li>
                     </ul>
                 </div>
-                <!--<form class="sidebar__form" action="php/mail_sidebar.php">
+                <form class="sidebar__form" method="post" action="php/forms.php">
+                    <label style="display: none">
+                        <input name="sidebar">
+                    </label>
                     <h3>Или оставьте заявку на консультацию и получите подарок нашего партнера</h3>
                     <label class="sidebar__label">
-                        <input class="sidebar__input sidebar__input_name" type="text" placeholder="Ваше имя" name="nameS"/>
+                        <input class="sidebar__input sidebar__input_name" type="text" placeholder="Ваше имя" name="name"/>
                     </label>
                     <label class="sidebar__label">
-                        <input class="sidebar__input sidebar__input_telephone" type="tel" placeholder="Телефон" name="telephoneS" value="77777777777"/>
+                        <input class="sidebar__input sidebar__input_telephone" type="tel" placeholder="Телефон" name="telephone"/>
                     </label>
                     <label class="sidebar__label">
-                        <input class="sidebar__input sidebar__input_city" type="text" placeholder="Ваш город" name="cityS"/>
+                        <input class="sidebar__input sidebar__input_city" type="text" placeholder="Ваш город" name="city"/>
                     </label>
                     <label class="sidebar__label">
-                        <select class="sidebar__input sidebar__input_field" id="cars" name="fieldS">
+                        <select class="sidebar__input sidebar__input_field" id="cars" name="field">
                             <option value="marketing">Маркетинг</option>
                             <option value="design">Дизайн</option>
                             <option value="programming">Программирование</option>
@@ -246,11 +248,11 @@
                     </label>
                     <button class="sidebar__button" type="submit">свяжитесь со мной сию минуту</button>
                     <label class="sidebar__label checkbox-container">
-                        <input class="sidebar__input sidebar__input_checkbox" type="checkbox" checked>
+                        <input class="sidebar__input sidebar__input_checkbox" type="checkbox">
                         <span class="checkmark"></span>
                         <i>Я даю своё <span>согласие</span> на обработку моих персональных данных</i>
                     </label>
-                </form>-->
+                </form>
             </div>
         </div>
     </div>
@@ -637,22 +639,25 @@
         <p class="interest__subtitle">
             Наработали огромный опыт и выполнили достаточное количество<br/>кейсов, чтобы решать их на высоком уровне
         </p>
-        <form class="interest__form" method="post" action="php/mail_interest.php">
-            <label class="interest__label">
-                <input class="interest__input interest__input_name" type="text" placeholder="Ваше имя" name="name" value="asdfasdf"/>
+        <form class="interest__form" method="post" action="php/forms.php" id="interest_form">
+            <label style="display: none">
+                <input name="interest">
             </label>
             <label class="interest__label">
-                <input class="interest__input interest__input_telephone" type="tel" placeholder="Телефон" name="telephone" value="88888888888"/>
+                <input class="interest__input interest__input_name" type="text" placeholder="Ваше имя" name="name"/>
             </label>
             <label class="interest__label">
-                <input class="interest__input interest__input_company" type="text" placeholder="Название компании" name="company" value="asdfasdf"/>
+                <input class="interest__input interest__input_telephone" type="tel" placeholder="Телефон" name="telephone"/>
             </label>
             <label class="interest__label">
-                <input class="interest__input interest__input_email" type="email" placeholder="Электронная почта" name="email" value="example@example.example"/>
+                <input class="interest__input interest__input_company" type="text" placeholder="Название компании" name="company"/>
+            </label>
+            <label class="interest__label">
+                <input class="interest__input interest__input_email" type="email" placeholder="Электронная почта" name="email"/>
             </label>
             <button class="interest__button" type="submit">Отправить</button>
             <label class="interest__label checkbox-container">
-                <input class="interest__input interest__input_checkbox" type="checkbox" checked>
+                <input class="interest__input interest__input_checkbox" type="checkbox">
                 <span class="checkmark"></span>
                 <i>Я даю своё <span>согласие</span> на обработку моих персональных данных</i>
             </label>
