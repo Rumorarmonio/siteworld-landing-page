@@ -167,14 +167,22 @@ url(../img/svg/form-icons/person.svg) no-repeat scroll 5 px 13 px;
     background: url(../img/svg/form-icons/cards.svg) no-repeat scroll 5px 13px;
 }
 
+/*TODO: common styles for buttons*/
 .sidebar__button {
     width: 100%;
     background-color: var(--cyan);
     padding: 15px;
     border-radius: 6px;
     color: var(--white);
+    cursor: pointer;
 }
 
+.sidebar__button:hover {
+    transition: .3s ease 50ms;
+    filter: drop-shadow(10px 10px 10px var(--grey));
+}
+
+/*TODO: fix adaptivity*/
 @media (max-width: 1240px) {
     .certificates {
         /*height: fit-content;*/

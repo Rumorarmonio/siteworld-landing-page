@@ -27,7 +27,7 @@ new JustValidate(sidebarForm)
         errorMessage: 'Согласитесь с правилами!'
     }
 ])
-.onSuccess(() => sendData(sidebarForm))
+.onSuccess(() => sendDataAndClear(sidebarForm))
 
 const interestForm = document.querySelector('.interest__form')
 const interestTelephone = interestForm.querySelector('input[type="tel"]')
@@ -101,11 +101,12 @@ new JustValidate(interestForm)
         errorMessage: 'Согласитесь с правилами!'
     }
 ])
-.onSuccess(() => sendData(interestForm))
+.onSuccess(() => sendDataAndClear(interestForm))
 
-function sendData(form) {
+function sendDataAndClear(form) {
     fetch(form.getAttribute('action'), {
         method: 'POST',
         body: new FormData(form)
     }).then(response => console.log('response status:', response.status))
+    form.reset()
 }

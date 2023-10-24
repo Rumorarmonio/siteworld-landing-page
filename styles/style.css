@@ -1354,6 +1354,12 @@ url(../img/svg/interest/person.svg) no-repeat scroll 5 px 13 px;
     padding: 15px;
     border-radius: 6px;
     color: var(--white);
+    cursor: pointer;
+}
+
+.interest__button:hover {
+    transition: .3s ease 50ms;
+    filter: drop-shadow(10px 10px 10px var(--grey));
 }
 
 .checkbox-container {
