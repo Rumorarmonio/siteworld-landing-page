@@ -66,14 +66,9 @@ if (isset($_POST['interest'])) {
 
 function sendTelegramMessage($subject)
 {
-    $textMessage = "Вам новое письмо!\n\nС темой:\n\n<b>'{$subject}'</b>\n\n<i>Не забудьте проверить почту!</i>";
-    $textMessage = urlencode($textMessage);
+    $textMessage = urlencode("Вам новое письмо!\n\nС темой:\n\n<b>'{$subject}'</b>\n\n<i>Не забудьте проверить почту!</i>");
 
     $urlQuery = 'https://api.telegram.org/bot' . TG_TOKEN . '/sendMessage?chat_id=' . TG_USER_ID . '&text=' . $textMessage . '&parse_mode=html';
 
-    var_dump($urlQuery);
-
-    $result = file_get_contents($urlQuery);
-
-    var_dump($result);
+    file_get_contents($urlQuery);
 }
