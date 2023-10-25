@@ -771,14 +771,18 @@
 
 .strings__string {
     display: block;
-    width: 127%;
     white-space: nowrap;
     font-size: 80px;
     font-weight: 200;
     line-height: 119px;
     margin: 0 0 30px -60px;
     text-transform: uppercase;
+    overflow: scroll;
     color: var(--grey);
+}
+
+.strings__string::-webkit-scrollbar {
+    display: none;
 }
 
 @media (max-width: 1350px) {
